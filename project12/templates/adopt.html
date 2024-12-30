@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt - Pet Adoption Platform</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+  <script src="{{ url_for('static', filename='js/adopt.js') }}"></script>
+</head>
+<body>
+  <header>
+    <nav class="topnav">
+      <ul class="left-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="adopt.html" class="active">Adopt</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+      <ul class="right-nav">
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Adopt a Pet, Change a Life</h1>
+      <p>Find your perfect furry companion today!</p>
+    </div>
+  </section>
+
+  <section class="search">
+    <h2>Find Your New Best Friend</h2>
+    <form id="filter-form">
+      <div class="filter-group">
+        <label for="pet-type"><img src="static/images/paw.png" alt="Paw Icon"></label>
+        <select id="pet-type">
+          <option value="all">All</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="breed"><img src="static/images/paws.png" alt="Breed Icon"></label>
+        <select id="breed">
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="gender"><img src="static/images/gender.png" alt="Gender Icon"></label>
+        <select id="gender">
+          <option value="all">All</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="age"><img src="static/images/time.png" alt="Age Icon"></label>
+        <select id="age">
+          <option value="all">All</option>
+          <option value="puppy">Puppy/Kitten</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
+        </select>
+      </div>
+      <button type="button" class="search-btn" onclick="filterPets()">Search</button>
+    </form>
+  </section>
+
+  <section class="pets">
+    <h2>Available Pets</h2>
+    <div class="pet-list" id="pet-list">
+      <!-- Pet cards will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <script src="adopt.js"></script>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    scrollToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+</body>
+</html>
