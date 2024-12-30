@@ -1,15 +1,13 @@
-
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
+document.querySelector("#contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent the default form submission
 
   // Collect form values
-  const name = document.getElementById("full-name").value.trim();
+  const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
   const message = document.getElementById("message").value.trim();
 
   // Form validation
-  if (!name || !email || !phone || !message) {
+  if (!name || !email || !message) {
     alert("Please fill out all required fields!");
     return;
   }
@@ -19,24 +17,24 @@ document.querySelector("form").addEventListener("submit", (e) => {
     return;
   }
 
-  // EmailJS Integration
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+  // Initialize EmailJS
+  emailjs.init("VC5uoc_rt7U3-gau-"); // Replace with your EmailJS public key
 
-  const serviceID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-  const templateID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
+  const serviceID = "service_tfqmgxb"; // Replace with your EmailJS service ID
+  const templateID = "template_8yr6sec"; // Replace with your EmailJS template ID
 
   const templateParams = {
     name: name,
     email: email,
-    phone: phone,
     message: message,
   };
 
+  // Send email using EmailJS
   emailjs.send(serviceID, templateID, templateParams)
-    .then(response => {
+    .then(function(response) {
       alert("Email sent successfully! Thank you for reaching out.");
     })
-    .catch(error => {
+    .catch(function(error) {
       alert("Failed to send email. Please try again later.");
       console.error("EmailJS error: ", error);
     });

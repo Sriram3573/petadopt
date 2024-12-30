@@ -22,11 +22,8 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Embrace Endless Love with Your New Furry Best Friend.</h1>
-      <p>Adopt now and start creating unforgettable memories together.</p>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero-image.jpg" alt="Woman hugging dog">
+      <h1>Adopt a Pet, Change a Life</h1>
+      <p>Find your perfect furry companion today!</p>
     </div>
   </section>
 
@@ -34,7 +31,7 @@
     <h2>Find Your New Best Friend</h2>
     <form id="filter-form">
       <div class="filter-group">
-        <label for="pet-type"><img src="icons/paw.png" alt="Paw Icon"></label>
+        <label for="pet-type"><img src="paw.png" alt="Paw Icon"></label>
         <select id="pet-type">
           <option value="all">All</option>
           <option value="dog">Dog</option>
@@ -42,13 +39,13 @@
         </select>
       </div>
       <div class="filter-group">
-        <label for="breed"><img src="icons/breed.png" alt="Breed Icon"></label>
+        <label for="breed"><img src="paws.png" alt="Breed Icon"></label>
         <select id="breed">
           <option value="all">All</option>
         </select>
       </div>
       <div class="filter-group">
-        <label for="gender"><img src="icons/gender.png" alt="Gender Icon"></label>
+        <label for="gender"><img src="gender.png" alt="Gender Icon"></label>
         <select id="gender">
           <option value="all">All</option>
           <option value="male">Male</option>
@@ -56,7 +53,7 @@
         </select>
       </div>
       <div class="filter-group">
-        <label for="age"><img src="icons/age.png" alt="Age Icon"></label>
+        <label for="age"><img src="time.png" alt="Age Icon"></label>
         <select id="age">
           <option value="all">All</option>
           <option value="puppy">Puppy/Kitten</option>
@@ -77,6 +74,18 @@
 
   <script src="adopt.js"></script>
   <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
 
+  <script>
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    scrollToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
 </body>
 </html>
