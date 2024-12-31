@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Pet Adoption Platform</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<script src="{{ url_for('static', filename='js/contact-us.js') }}"></script>
+</head>
+<body>
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions or want to know more about pet adoption, feel free to reach out to us.</p>
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit" class="search-btn">Send Message</button>
+    </form>
+  </section>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("VC5uoc_rt7U3-gau-"); 
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return;
+      }
+      const serviceID = "service_tfqmgxb"; 
+      const templateID = "template_8yr6sec"; 
+
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      emailjs.send(serviceID, templateID, templateParams)
+        .then(function(response) {
+          alert("Message sent successfully!");
+        }, function(error) {
+          alert("Failed to send message. Please try again.");
+          console.error("EmailJS Error:", error);
+        });
+    });
+  </script>
+</body>
+</html>
