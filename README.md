@@ -1,4 +1,3 @@
-# petadopt
 # Pet Adoption Platform
 
 ## Overview
