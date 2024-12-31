@@ -94,22 +94,16 @@ The database is initialized using the `init_db()` function, which creates the ne
    - Install Python 3.x.
    - Install required dependencies:
      ```bash
-     pip install flask werkzeug
+pip install -r requirements.txt
      ```
 
-2. **Initialize Database**:
+2. **To run the project and Initialize Database**:
    - Run the application once to create the database automatically:
      ```bash
      python app.py
      ```
 
-3. **Start the Server**:
-   - Launch the Flask development server:
-     ```bash
-     python app.py
-     ```
-
-4. **Access the Application**:
+3. **Access the Application**:
    - Open a web browser and go to `http://127.0.0.1:5000/`.
 
 ---
