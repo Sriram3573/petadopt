@@ -93,7 +93,7 @@ The database is initialized using the `init_db()` function, which creates the ne
 
 1. **Setup Environment**:
      ```bash
-      pip install -r requirements.txt
+      pip install -r requirement.txt
      ```
 
 2. **To run the project and Initialize Database**:
