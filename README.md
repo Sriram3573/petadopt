@@ -91,10 +91,8 @@ The database is initialized using the `init_db()` function, which creates the ne
 ## How to Run the Project
 
 1. **Setup Environment**:
-   - Install Python 3.x.
-   - Install required dependencies:
      ```bash
-pip install -r requirements.txt
+      pip install -r requirements.txt
      ```
 
 2. **To run the project and Initialize Database**:
