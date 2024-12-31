@@ -64,9 +64,10 @@ The backend is built using **Flask**, a lightweight and flexible Python web fram
 - `/register`: User registration
 - `/adopt`: View and filter pets available for adoption
 - `/blog`: Access informative articles
+-  `/about-us: Acess the about us page
 - `/get-involved`: Learn about community engagement
 - `/contact-us`: Send inquiries using Email.js
-
+- `/popup.html`:Opens the popup window for pet adoption
 ---
 
 ## Database
